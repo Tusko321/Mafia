@@ -1,10 +1,10 @@
 local maflib = {};
 maflib.languages = {};
-maflib.languagebase = {
-	function SetComments(...)
-		maflib.languages[self.name].comments = {...};
-	end
-};
+maflib.languagebase = {};
+
+function maflib.languagebase:SetComments(...)
+	maflib.languages[self.name].comments = {...};
+end
 
 function maflib:AddLanguage(name)
 	self.languages[name] = {};
@@ -13,3 +13,5 @@ function maflib:AddLanguage(name)
 	
 	return (self.languages[name].base);
 end
+
+function maflib()
