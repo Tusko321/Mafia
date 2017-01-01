@@ -1,6 +1,7 @@
 maflib = {};
 maflib.languages = {};
 include "maflib/languagebase.lua"
+include "maflib/compiler.lua"
 
 function maflib:AddLanguage(name)
 	self.languages[name] = {};
@@ -8,9 +9,4 @@ function maflib:AddLanguage(name)
 	self.languages[name].base.name = name;
 	
 	return (self.languages[name].base);
-end
-
-function maflib:CompileLanguage(name, text)
-	local comments = maflib.languages[name].comments;
-	local advcomments = maflib.languages[name].advcomments;
 end
