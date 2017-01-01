@@ -15,5 +15,5 @@ function maflib:AddLanguage(name)
 end
 
 function maflib:CompileLanguage(name, text)
-		
+	text = text:gsub("\n", "");
 end
