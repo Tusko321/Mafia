@@ -14,4 +14,6 @@ function maflib:AddLanguage(name)
 	return (self.languages[name].base);
 end
 
-function maflib()
+function maflib:CompileLanguage(name, text)
+		
+end
