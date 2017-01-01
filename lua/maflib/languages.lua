@@ -1,4 +1,4 @@
 local cpp = maflib:AddLanguage("C++");
-cpp:SetComments("//");
-cpp:SetAdvancedComments({"/*", "*/"});
+cpp:AddComment("//");
+cpp:AddAdvancedComment("/*", "*/");
 cpp:SetTypes("int", "float", "bool");
