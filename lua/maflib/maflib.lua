@@ -11,5 +11,5 @@ function maflib:AddLanguage(name)
 	self.languages[name].base = maflib.languagebase;
 	self.languages[name].base["name"] = name;
 	
-	return (self.languagebase);
+	return (self.languages[name].base);
 end
