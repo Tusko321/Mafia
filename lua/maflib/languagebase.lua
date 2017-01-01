@@ -14,6 +14,10 @@ function maflib.languagebase:SetAdvancedComments(...)
 	end
 end
 
+function maflib.languagebase:AddAdvancedComment(cstart, cend)
+	maflib.languages[self.language].advcomments[#maflib.languages[self.language].advcomments + 1] = {cstart, cend};
+end
+
 function maflib.languagebase:SetTypes(...)
 	maflib.languages[self.name].types = {...};
 end
