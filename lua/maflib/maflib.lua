@@ -15,4 +15,8 @@ function maflib:AddGlobal(type, name, value)
 	
 end
 
+function maflib:RemoveGlobal(name)
+	
+end
+
 include "maflib/languages.lua"
