@@ -1,4 +1,4 @@
-local maflib = {};
+maflib = {};
 maflib.languages = {};
 include "maflib/languagebase.lua"
 
