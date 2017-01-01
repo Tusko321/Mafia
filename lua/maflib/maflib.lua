@@ -11,4 +11,8 @@ function maflib:AddLanguage(name)
 	return (self.languages[name].base);
 end
 
+function maflib:AddGlobal(type, name, value)
+	
+end
+
 include "maflib/languages.lua"
