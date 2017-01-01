@@ -6,8 +6,10 @@ function maflib.languagebase:SetComments(...)
 	maflib.languages[self.name].comments = {...};
 end
 
-funciton maflib:languagebase:SetAdvancedComments(cstart, cend)
-	maflib.languages[self.name].advcomments[maflib.languages[self.name].advcomments + 1] = {cstart, cend};
+function maflib.languagebase:SetAdvancedComments(...)
+	for k,v in next, {...} do
+		maflib.languages[self.language].advcomments[maflib.languages[self.language].advcomments + 1] = {v[1], v[2]};
+	end
 end
 
 function maflib:AddLanguage(name)
