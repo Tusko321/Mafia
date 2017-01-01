@@ -1,4 +1,8 @@
-maflib.languagebase = {};
+maflib.languagebase = {
+	comments = {};
+	types = {};
+	extensions = {};
+};
 
 function maflib.languagebase:SetComments(...)
 	maflib.languages[self.name].comments = {...};
@@ -22,6 +26,14 @@ function maflib.languagebase:SetTypes(...)
 	maflib.languages[self.name].types = {...};
 end
 
-function maflib.languageBase:AddType(typename)
+function maflib.languagebase:AddType(typename)
 	maflib.languages[self.name].types[#maflib.languages[self.name].types + 1] = typename;	
+end
+
+function maflib.languagebase:SetExtensions(...)
+	maflib.languages[self.name].extensions = {...};	
+end
+
+function maflib.languagebase:AddExtension(name)
+	maflib.languages[self.name].extensions[#maflib.languages[self.name].extensions + 1] = name;	
 end
