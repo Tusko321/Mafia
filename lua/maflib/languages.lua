@@ -1,3 +1,3 @@
-local cpp = maflib:AddLanguage();
+local cpp = maflib:AddLanguage("C++");
 cpp:SetComments("//");
 cpp:SetAdvancedComments({"/*", "*/"});
